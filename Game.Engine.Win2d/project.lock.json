@@ -24450,12 +24450,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
+      "projectUniqueName": "C:\\Projects\\Test\\NeuralNetworkDemoApp\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
       "projectName": "Game.Engine.Win2d",
-      "projectPath": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
-      "projectJsonPath": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\project.json",
+      "projectPath": "C:\\Projects\\Test\\NeuralNetworkDemoApp\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
+      "projectJsonPath": "C:\\Projects\\Test\\NeuralNetworkDemoApp\\Game.Engine.Win2d\\project.json",
       "packagesPath": "C:\\Users\\Anton Antonov\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\obj\\",
+      "outputPath": "C:\\Projects\\Test\\NeuralNetworkDemoApp\\Game.Engine.Win2d\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\Anton Antonov\\AppData\\Roaming\\NuGet\\NuGet.Config",

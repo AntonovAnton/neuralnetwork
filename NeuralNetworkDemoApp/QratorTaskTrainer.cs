@@ -14,7 +14,7 @@ namespace NeuralNetworkDemoApp
         public override string Name => "Qrator task";
 
         public override int InputLayer => 3;
-
+                
         public override int OutputLayer => 1;
 
         public QratorTaskTrainer()
@@ -111,7 +111,7 @@ namespace NeuralNetworkDemoApp
             var v2sum = 0d;
             for (int i = 0; i < dirty.Length; i++)
             {
-                if (v0[i].Length == 0)
+                if(v0[i].Length == 0)
                 {
                     if (count != 0)
                     {
