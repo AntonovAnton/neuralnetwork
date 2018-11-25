@@ -1,11 +1,14 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
-/NeuralNetworkApp/.vs
-/NeuralNetworkApp/NeuralNetworkApp/obj
-/NeuralNetworkApp/NeuralNetworkApp/bin/Debug/app.publish
-/NeuralNetworkApp/NeuralNetworkApp/bin/Debug
 /.vs
-/NeuralNetworkApp/bin/Debug
+/NeuralNetworkApp/bin
 /NeuralNetworkApp/obj
+/Game.Engine.Win2d/bin
+/Game.Engine.Win2d/obj
+/NeuralNetwork/bin
+/NeuralNetwork/obj
+/NeuralNetworkDemoApp/bin
+/NeuralNetworkDemoApp/obj
+/NeuralNetworkDemoApp/BundleArtifacts
+/NeuralNetworkDemoApp/BundleArtifacts
