@@ -13,8 +13,8 @@ namespace NeuralNetworkDemoApp
     {
         public override string Name => "Qrator task";
 
-        public override int InputLayer => 2;
-                
+        public override int InputLayer => 3;
+
         public override int OutputLayer => 1;
 
         public QratorTaskTrainer()
@@ -33,9 +33,11 @@ namespace NeuralNetworkDemoApp
             for (int i = 1; i < strings.Length; i++)
             {
                 var s = strings[i].Split(',');
-                var target = double.Parse(s[2]) * 60 + double.Parse(s[3]);
+                var target = double.Parse(s[2]) * 60 + double.Parse(s[3]); //1440 min in day
                 dirty[i - 1] = new double[] { target, double.Parse(s[4]), double.Parse(s[5]), double.Parse(s[6]) };
             }
+
+            #region REMOVE ANOMALIES
 
             var skipCount = 10;
             var v0 = dirty.OrderBy(d => d[0]).ThenBy(d => d[1]).ToArray();
@@ -98,6 +100,10 @@ namespace NeuralNetworkDemoApp
                 }
             }
 
+            #endregion
+
+            #region AVERAGE BY MINUTES OD DAY
+
             var aver = new List<double[]>();
             var count = 0;
             var v0sum = 0d;
@@ -105,7 +111,7 @@ namespace NeuralNetworkDemoApp
             var v2sum = 0d;
             for (int i = 0; i < dirty.Length; i++)
             {
-                if(v0[i].Length == 0)
+                if (v0[i].Length == 0)
                 {
                     if (count != 0)
                     {
@@ -125,16 +131,21 @@ namespace NeuralNetworkDemoApp
                 }
             }
 
-            
+            #endregion
+
+            #region NORMALIZATION
+
             var trainingset = new double[aver.Count][];
             var targets = new double[aver.Count][];
             for (int i = 0; i < aver.Count; i++)
             {
-                targets[i] = new double[] { aver[i][0] / 1440 };
-                var normalized = Vector2.Normalize(new Vector2((float)aver[i][1], (float)aver[i][2]));
-                trainingset[i] = new double[] { normalized.X, normalized.Y };
+                targets[i] = new double[] { aver[i][0] / 1440 }; //1440 min in day
+                var normalized = Vector3.Normalize(new Vector3((float)aver[i][1], (float)aver[i][2], (float)aver[i][3]));
+                trainingset[i] = new double[] { normalized.X, normalized.Y, normalized.Z };
             }
-            
+
+            #endregion
+
             TrainingSet = trainingset;
             Targets = targets;
         }
