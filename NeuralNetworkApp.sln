@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Engine.Win2d", "..\Test\NeuralNetworkDemoApp\Game.Engine.Win2d\Game.Engine.Win2d.csproj", "{261E1B04-F3F7-4A77-9A52-6C575DBCEBB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Engine.Win2d", "Game.Engine.Win2d\Game.Engine.Win2d.csproj", "{261E1B04-F3F7-4A77-9A52-6C575DBCEBB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetwork", "..\Test\NeuralNetworkDemoApp\NeuralNetwork\NeuralNetwork.csproj", "{EDFF1850-3472-41B4-88EF-A2D75A0A45FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetwork", "NeuralNetwork\NeuralNetwork.csproj", "{EDFF1850-3472-41B4-88EF-A2D75A0A45FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetworkDemoApp", "..\Test\NeuralNetworkDemoApp\NeuralNetworkDemoApp\NeuralNetworkDemoApp.csproj", "{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetworkDemoApp", "NeuralNetworkDemoApp\NeuralNetworkDemoApp.csproj", "{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,8 +54,6 @@ Global
 		{EDFF1850-3472-41B4-88EF-A2D75A0A45FC}.Release|x86.ActiveCfg = Release|x86
 		{EDFF1850-3472-41B4-88EF-A2D75A0A45FC}.Release|x86.Build.0 = Release|x86
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|Any CPU.Build.0 = Debug|x86
-		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|ARM.ActiveCfg = Debug|ARM
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|ARM.Build.0 = Debug|ARM
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -66,8 +64,6 @@ Global
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|x86.Build.0 = Debug|x86
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Debug|x86.Deploy.0 = Debug|x86
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Release|Any CPU.ActiveCfg = Release|x86
-		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Release|Any CPU.Build.0 = Release|x86
-		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Release|Any CPU.Deploy.0 = Release|x86
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Release|ARM.ActiveCfg = Release|ARM
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Release|ARM.Build.0 = Release|ARM
 		{B03B5E6A-8792-4EC5-85CB-FDAC2653780E}.Release|ARM.Deploy.0 = Release|ARM
