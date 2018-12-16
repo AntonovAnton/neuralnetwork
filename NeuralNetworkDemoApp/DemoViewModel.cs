@@ -206,7 +206,7 @@ namespace NeuralNetworkDemoApp
 
             DemoList.Add(new Xor2Trainer());
             DemoList.Add(new Xor3Trainer());
-            DemoList.Add(new QratorTaskTrainer());
+            //DemoList.Add(new QratorTaskTrainer());
             CurrentDemo = DemoList[0];
         }
 
@@ -217,7 +217,14 @@ namespace NeuralNetworkDemoApp
             CurrentDemo.TrainingEnded -= TrainingEnded;
             CurrentDemo.TrainingEnded += TrainingEnded;
 
-            CurrentDemo.HiddenLayers = HiddenLayers.Split(',').Select(l => int.Parse(l)).ToArray();
+            if (string.IsNullOrWhiteSpace(HiddenLayers) == false)
+            {
+                CurrentDemo.HiddenLayers = HiddenLayers.Split(',').Select(l => int.Parse(l)).ToArray();
+            }
+            else
+            {
+                CurrentDemo.HiddenLayers = new int[] { };
+            }
             CurrentDemo.Speed = SpeedValue;
             CurrentDemo.LearningRate = LearningRate;
             CurrentDemo.TargetError = TargetError;

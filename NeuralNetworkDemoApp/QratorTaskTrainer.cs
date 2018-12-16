@@ -26,7 +26,7 @@ namespace NeuralNetworkDemoApp
 
         private async Task Initialize()
         {
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///segments_study.csv"));
+            StorageFile file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("test.txt");
             var text = await FileIO.ReadTextAsync(file);
             var strings = text.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             var dirty = new double[strings.Length - 1][];

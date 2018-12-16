@@ -78,7 +78,7 @@ namespace NeuralNetwork
 
         public abstract int InputLayer { get; }
 
-        public int[] HiddenLayers { get; set; } = new[] { 2, 2 };
+        public int[] HiddenLayers { get; set; } = new int[] { };
 
         public abstract int OutputLayer { get; }
 

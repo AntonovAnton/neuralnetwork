@@ -20,7 +20,7 @@ namespace NeuralNetwork
             {
                 throw new ArgumentNullException(nameof(layers));
             }
-            if (layers.Length < 3)
+            if (layers.Length < 2)
             {
                 throw new ArgumentException();
             }

@@ -120,6 +120,9 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="NeuralNetworkDemoApp_TemporaryKey.pfx" />
     <Content Include="segments_study.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
