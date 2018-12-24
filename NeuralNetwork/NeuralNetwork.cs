@@ -13,6 +13,8 @@ namespace NeuralNetwork
 
         private double[][] _activations;
         private double[][][] _weight;
+        private double[] _bias;
+        private double[][] _biasWeight;
 
         public NeuralNetwork(int[] layers, int randomSeed)
         {
@@ -62,6 +64,21 @@ namespace NeuralNetwork
                     }
                 }
             }
+
+            _bias = new double[_layers.Length - 1]; //it is added only for input and hidded layers
+            for (int i = 0; i < _bias.Length; i++)
+            {
+                _bias[i] = 1d;
+            }
+            _biasWeight = new double[_bias.Length][];
+            for (int i = 0; i < _layers.Length - 1; i++) //by each layer without output layer (bias is only one additional neuron in input layer and in each hidden layer)
+            {
+                _biasWeight[i] = new double[_layers[i + 1]];
+                for (int k = 0; k < _layers[i + 1]; k++) //bias as neuron to neuron in next layer
+                {
+                    _biasWeight[i][k] = Random(-1d, 1d);
+                }
+            }
         }
 
         public double[] Update(double[] inputs)
@@ -85,6 +102,7 @@ namespace NeuralNetwork
                     {
                         sum += _activations[i][j] * _weight[i][j][k];
                     }
+                    sum += _bias[i] * _biasWeight[i][k];
                     _activations[i + 1][k] = Sigmoid(sum);
                 }
             }
@@ -107,14 +125,10 @@ namespace NeuralNetwork
             for (int i = 0; i < _layers.Length; i++)
             {
                 delta[i] = new double[_layers[i]];
-                for (int j = 0; j < _layers[i]; j++)
-                {
-                    delta[i][j] = 0d;
-                }
             }
-
-            //output
-            var outputLayerIndex = _layers.Length - 1;
+            
+            //output
+            var outputLayerIndex = _layers.Length - 1;
             for (int i = 0; i < _layers[outputLayerIndex]; i++)
             {
                 //delta by https://en.wikipedia.org/wiki/Delta_rule
@@ -149,6 +163,16 @@ namespace NeuralNetwork
                     }
                 }
             }
+
+            //update weights of biases
+            for (int i = 0; i < _layers.Length - 1; i++)
+            {
+                for (int k = 0; k < _layers[i + 1]; k++)
+                {
+                    _biasWeight[i][k] = _biasWeight[i][k] + learningRate * delta[i + 1][k] * _bias[i];
+                }
+            }
+
             var error = 0d;
             for (int i = 0; i < targets.Length; i++)
                 error = Math.Max(Math.Abs(targets[i] - _activations[outputLayerIndex][i]), error);
@@ -165,9 +189,9 @@ namespace NeuralNetwork
             return 1d / (1d + Math.Exp(-x));
         }
 
-        private double Dsigm(double y)
+        private double Dsigm(double x)
         {
-            return y * (1 - y);
+            return x * (1 - x);
         }
     }
 }
