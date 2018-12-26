@@ -16219,10 +16219,11 @@
       ]
     },
     "Microsoft.Net.Native.Compiler/1.7.0": {
-      "sha512": "g46kdqDNrrVx3CiUoSe2QDkUPi/hsncwGK2k0jti5e6PZkiUWlplhkjGHS/Xrp4dx6+KhC3tuUtStHaNX7emMQ==",
+      "sha512": "0Ra/EIrzYAUraHo6ukangqCC6tsEwYGJYbct7TCSbJlWLHRN4WRkUrOis4tDmMzh+NfGpBEanWcbDUCUoaGeBw==",
       "type": "package",
       "path": "microsoft.net.native.compiler/1.7.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.Compiler.props",
         "build/Microsoft.Net.Native.Compiler.targets",
         "microsoft.net.native.compiler.1.7.0.nupkg.sha512",
@@ -17117,10 +17118,11 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-arm/1.7.0": {
-      "sha512": "eI4KNNMOpgpBkdXHFgmXD2l5gNdJJOV+ntN1Fwwnm93Rr7pmD8MGssJpI7wo7+uieaFIfAZ2waZjEnRR4Uu90A==",
+      "sha512": "6uJxotTssbkPAhg6mHxiiY2URkR+0TaMW8ku8WKtdXPI6CTJj+xXlCsiU8Ewh14sKcQMNTIhGfJ8ZBRU2EN+Xw==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-arm/1.7.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.SharedLibrary-arm.props",
         "build/Microsoft.Net.Native.SharedLibrary-arm.targets",
         "microsoft.net.native.sharedlibrary-arm.1.7.0.nupkg.sha512",
@@ -17515,10 +17517,11 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-x64/1.7.0": {
-      "sha512": "3nrUuvayvlOdmx7yzUBu2PzKeQmZ0mwqhMfarOzt6X1tKjIrOONCFqH148rP7TgQDJBfKVSShB1f+BedF69emw==",
+      "sha512": "1ioXY3CfROw1GsviGsU5Wcw7n+sr8qCtrgiWiAAC3yYlHyxmieq+aPRvnskRGsS6Tx9kzqGLBNsakRNr0tAWWA==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x64/1.7.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.SharedLibrary-x64.props",
         "build/Microsoft.Net.Native.SharedLibrary-x64.targets",
         "microsoft.net.native.sharedlibrary-x64.1.7.0.nupkg.sha512",
@@ -17913,10 +17916,11 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-x86/1.7.0": {
-      "sha512": "nC682cBwXA/ITw1BKnPxMBp93uHHFPmG/X9P+mQt1yCJBXnEcNi7XzzOROmqMuNwwtk5ci/cQE4HQDytn3O39g==",
+      "sha512": "XPfQE+3Jxu24ac/oPR0FGsDFEcgF9oHk+ioALY9RAQyFLVo2Vmwm7pl+V4zqvidgYvV+7Pg+hEr5DORxDA/mRA==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x86/1.7.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.SharedLibrary-x86.props",
         "build/Microsoft.Net.Native.SharedLibrary-x86.targets",
         "microsoft.net.native.sharedlibrary-x86.1.7.0.nupkg.sha512",
@@ -18454,10 +18458,11 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/5.4.0": {
-      "sha512": "n4RuBnnZXGZbpXJb49CuZxc6Yu8WeRTzkg1dutyT8a4PczoST7uRVZpH3bRAOa6+dpulzP0qUH60+xPGxmzsWA==",
+      "sha512": "8UIOF4ViKA/sOj6nqY262ncrATYDi/qm/aw3UR5SFjajCfAoTnpdFL21A06ov4jo37SfvymWfZetbMdE/7aLqQ==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/5.4.0",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "microsoft.netcore.universalwindowsplatform.5.4.0.nupkg.sha512",
@@ -21834,10 +21839,11 @@
       ]
     },
     "System.Private.DataContractSerialization/4.1.2": {
-      "sha512": "e700XsW/HO7qlnatKyVXEFHJMNXDkPOkn4pmpddXcJk6KEsnYIpJUHDFycHKB3mRVsgRtUYiDRbRKhecwo2ezg==",
+      "sha512": "9TaMhmGp/HscDJxxTmH54Ncmtm8HcprXNjYa8QcjXccS6Co9IH1SzGpqaaSeMBvWB4qt+Qy14/QLDVTcKkT3og==",
       "type": "package",
       "path": "system.private.datacontractserialization/4.1.2",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.3/System.Private.DataContractSerialization.dll",
@@ -22750,10 +22756,11 @@
       ]
     },
     "System.Runtime.Serialization.Json/4.0.3": {
-      "sha512": "siAQb9mZmY7dsBtdbC0OE7W1/y4DGgrIRHTghtN40v79wAvHluBm1wzlrCauCWMyp6WVxkcTzoesjZnx5+fM9g==",
+      "sha512": "ZOrVgoC2zMU3D2TtWMOwhxx8e9ukR/3IZOavUXaKb0jA/JkRi69I8Cvgqk+WLbk8BZ/gOKY0DyTBGzK02eedsQ==",
       "type": "package",
       "path": "system.runtime.serialization.json/4.0.3",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -22878,10 +22885,11 @@
       ]
     },
     "System.Runtime.Serialization.Xml/4.1.2": {
-      "sha512": "MDlAdO3DaLsoeGOadY811tONi+sz3qiaLwT0B+Plr6dwFfx2RNM+turm1cz1G1jKy2zZP86x417COdMIRsWZxw==",
+      "sha512": "dqlKmjPDrd/7kSQyiYL/lOSx5yGctcYYBVwP02t9a5abJc8jA/z7LY8WoMMsfnofDooFJkSopVbBUA9+Y8Nzbg==",
       "type": "package",
       "path": "system.runtime.serialization.xml/4.1.2",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -24420,10 +24428,11 @@
       ]
     },
     "Win2D.uwp/1.21.0": {
-      "sha512": "4Ds/p7HgysgV67pBo/+w7Lidj08Hfa4GD9Zg9HdN3/zLfzRPttHrIn2TUiOUZCgH4eLVJwzOk114ntv4bveS1Q==",
+      "sha512": "mDwummDtvwHwKYcUDD1E+KfouZKFvu1yuwQulG874h0mFHUjm6DGp/53KuBhBhJVnTN/NBED5b/OwBbgskl+OA==",
       "type": "package",
       "path": "win2d.uwp/1.21.0",
       "files": [
+        ".signature.p7s",
         "Win2d.githash.txt",
         "build/native/Win2D.uwp.targets",
         "include/Microsoft.Graphics.Canvas.h",
@@ -24446,24 +24455,25 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\Anton Antonov\\.nuget\\packages\\": {}
+    "C:\\Users\\a.antonov\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
+      "projectUniqueName": "C:\\git\\neuralnetwork\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
       "projectName": "Game.Engine.Win2d",
-      "projectPath": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
-      "projectJsonPath": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\project.json",
-      "packagesPath": "C:\\Users\\Anton Antonov\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\neuralnetwork\\Game.Engine.Win2d\\obj\\",
+      "projectPath": "C:\\git\\neuralnetwork\\Game.Engine.Win2d\\Game.Engine.Win2d.csproj",
+      "projectJsonPath": "C:\\git\\neuralnetwork\\Game.Engine.Win2d\\project.json",
+      "packagesPath": "C:\\Users\\a.antonov\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\neuralnetwork\\Game.Engine.Win2d\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "C:\\Users\\Anton Antonov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\a.antonov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.plarium.com": {}
       }
     },
     "dependencies": {

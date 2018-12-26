@@ -13,8 +13,10 @@ namespace NeuralNetwork
 
         private double[][] _activations;
         private double[][][] _weight;
+        private double[][][] _grad;
         private double[] _bias;
         private double[][] _biasWeight;
+        private double[][] _biasGrad;
 
         public NeuralNetwork(int[] layers, int randomSeed)
         {
@@ -32,12 +34,13 @@ namespace NeuralNetwork
         }
 
         public int[] Layers => _layers;
-
         public double[][] Activations => _activations;
-
+        public double[][][] Grad => _grad;
         public double[][][] Weight => _weight;
-
+        public double[][] BiasGrad => _biasGrad;
+        public double[][] BiasWeight => _biasWeight;
         public double MaxWeight { get; private set; } = 1d;
+        public double TotalError { get; private set; } = 1d;
 
         public void Initialize()
         {
@@ -46,7 +49,15 @@ namespace NeuralNetwork
             {
                 _activations[i] = new double[_layers[i]]; //set activation value for each neuron
             }
-
+            _grad = new double[_layers.Length - 1][][];
+            for (int i = 0; i < _layers.Length - 1; i++) //by each layer without output layer
+            {
+                _grad[i] = new double[_layers[i]][];
+                for (int j = 0; j < _layers[i]; j++) //by each neuron in current layer
+                {
+                    _grad[i][j] = new double[_layers[i + 1]];
+                }
+            }
             _weight = new double[_layers.Length - 1][][];
             for (int i = 0; i < _layers.Length - 1; i++) //by each layer without output layer
             {
@@ -69,6 +80,11 @@ namespace NeuralNetwork
             for (int i = 0; i < _bias.Length; i++)
             {
                 _bias[i] = 1d;
+            }
+            _biasGrad = new double[_bias.Length][];
+            for (int i = 0; i < _layers.Length - 1; i++) //by each layer without output layer (bias is only one additional neuron in input layer and in each hidden layer)
+            {
+                _biasGrad[i] = new double[_layers[i + 1]];
             }
             _biasWeight = new double[_bias.Length][];
             for (int i = 0; i < _layers.Length - 1; i++) //by each layer without output layer (bias is only one additional neuron in input layer and in each hidden layer)
@@ -155,7 +171,8 @@ namespace NeuralNetwork
                 {
                     for (int k = 0; k < _layers[i + 1]; k++)
                     {
-                        _weight[i][j][k] = _weight[i][j][k] + learningRate * delta[i + 1][k] * _activations[i][j];
+                        _grad[i][j][k] = -delta[i + 1][k] * _activations[i][j];
+                        _weight[i][j][k] = _weight[i][j][k] + learningRate * -_grad[i][j][k];
                         if (_weight[i][j][k] > MaxWeight)
                         {
                             MaxWeight = _weight[i][j][k];
@@ -169,7 +186,8 @@ namespace NeuralNetwork
             {
                 for (int k = 0; k < _layers[i + 1]; k++)
                 {
-                    _biasWeight[i][k] = _biasWeight[i][k] + learningRate * delta[i + 1][k] * _bias[i];
+                    _biasGrad[i][k] = -delta[i + 1][k] * _bias[i];
+                    _biasWeight[i][k] = _biasWeight[i][k] + learningRate * -_biasGrad[i][k];
                 }
             }
 
