@@ -206,7 +206,7 @@ namespace NeuralNetworkDemoApp
 
             DemoList.Add(new Xor2Trainer());
             DemoList.Add(new Xor3Trainer());
-            //DemoList.Add(new QratorTaskTrainer());
+            DemoList.Add(new QratorTaskTrainer());
             CurrentDemo = DemoList[0];
         }
 

@@ -13,28 +13,28 @@ namespace NeuralNetworkDemoApp
     {
         public override string Name => "Qrator task";
 
-        public override int InputLayer => 3;
+        public override int InputLayer => 1;
                 
         public override int OutputLayer => 1;
 
         public QratorTaskTrainer()
         {
-            HiddenLayers = new[] { 4, 4 };
+            HiddenLayers = new[] { 2, 2 };
 
             Initialize().Wait();
         }
 
         private async Task Initialize()
         {
-            StorageFile file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("test.txt");
+            StorageFile file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("segments_study.csv");
             var text = await FileIO.ReadTextAsync(file);
             var strings = text.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             var dirty = new double[strings.Length - 1][];
             for (int i = 1; i < strings.Length; i++)
             {
                 var s = strings[i].Split(',');
-                var target = double.Parse(s[2]) * 60 + double.Parse(s[3]); //1440 min in day
-                dirty[i - 1] = new double[] { target, double.Parse(s[4]), double.Parse(s[5]), double.Parse(s[6]) };
+                var minutes = double.Parse(s[2]) * 60 + double.Parse(s[3]); //1440 min in day
+                dirty[i - 1] = new double[] { minutes, double.Parse(s[4]), double.Parse(s[5]), double.Parse(s[6]) };
             }
 
             #region REMOVE ANOMALIES
@@ -139,9 +139,9 @@ namespace NeuralNetworkDemoApp
             var targets = new double[aver.Count][];
             for (int i = 0; i < aver.Count; i++)
             {
-                targets[i] = new double[] { aver[i][0] / 1440 }; //1440 min in day
-                var normalized = Vector3.Normalize(new Vector3((float)aver[i][1], (float)aver[i][2], (float)aver[i][3]));
-                trainingset[i] = new double[] { normalized.X, normalized.Y, normalized.Z };
+                trainingset[i] = new double[] { aver[i][0] / 1440 }; //1440 min in day
+                var normalized = Vector2.Normalize(new Vector2(1f, (float)aver[i][3]));
+                targets[i] = new double[] { normalized.Y };
             }
 
             #endregion
