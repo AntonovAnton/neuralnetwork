@@ -1,2 +1,2 @@
-# neuralnetwork
-Neural network which was written by me on C# with 2D(Win2d) demonstration of learning
+# Neural Network
+Neural Network which was written by me on C# with 2D(Win2d) learning demonstration
